@@ -33,6 +33,7 @@ require "conexion.php";
                         <th>Nombre del Curso</th>
                         <th>Docente</th>
                         <th>Horas</th>
+                        <th>Horario</th>
                         <th>Días</th>
                         <th>Eliminar</th>
                     </tr>
@@ -50,8 +51,9 @@ require "conexion.php";
                         echo "<td>{$row['nombre_curso']}</td>";
                         echo "<td>{$row['nombre_docente']}</td>";
                         echo "<td>{$row['numero_horas']}</td>";
+                        echo "<td>{$row['horario']}</td>";
                         echo "<td>{$row['dias']}</td>";
-                        echo "<td><a href='eliminar_curso.php?id={$row['id']}' onclick='confirmarEliminacion(event)'>Eliminar</a></td>";
+                        echo "<td><a href='eliminar_curso.php?id={$row['id']}'>Eliminar</a></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -64,13 +66,6 @@ require "conexion.php";
         </div>
     </div>
 </div>
-<script>
-function confirmarEliminacion(event) {
-    if (!confirm("¿Seguro que quieres eliminar este registro?")) {
-        event.preventDefault(); 
-    }
-}
-</script>
 
 </body>
 </html>

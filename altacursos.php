@@ -39,7 +39,15 @@
                             <option>40</option>
                         </select>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="horario">Selecciona un horario:</label>
+                        <select id="horario" name="horario" class="input-card">
+                            <option value="">Selecciona un horario</option>
+                            <option value="8-11am">8 - 11 am</option>
+                            <option value="11-2pm">11 am - 2 pm</option>
+                            <option value="2-5pm">2 pm - 5 pm</option>
+                        </select>
+                    </div>
                     <div class="dias-container">
                         <h4 class="dias-title">Días del curso</h4>
                         <label class="dias-option">
@@ -67,8 +75,9 @@
         $('#formulario').on('submit', function (e) {
             var nombre    = $.trim($('input[name="nombre_curso"]').val());
             var docente   = $.trim($('input[name="nombre_docente"]').val());
-            var numero_horas     = $('select[name="numero_horas"]').val();
-            var dias      = $('input[name="dias"]:checked').val();
+            var numero_horas = $('select[name="numero_horas"]').val();
+            var horario = $('#horario').val();
+            var dias = $('input[name="dias"]:checked').val();
             var objetivo  = $.trim($('textarea[name="objetivo"]').val());
 
             if (!nombre) {
@@ -86,6 +95,12 @@
             if (!numero_horas || numero_horas === 'Numero de horas del curso') {
                 alert('Selecciona el número de horas del curso');
                 $('select[name="numero_horas"]').focus();
+                e.preventDefault();
+                return false;
+            }
+            if (!horario) {
+                alert('Selecciona un horario para el curso');
+                $('#horario').focus();
                 e.preventDefault();
                 return false;
             }

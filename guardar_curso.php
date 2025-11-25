@@ -9,20 +9,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_curso = trim($_POST['nombre_curso']);
     $nombre_docente = trim($_POST['nombre_docente']);
     $numero_horas = trim($_POST['numero_horas']);
+    $horario = trim($_POST['horario']);
     $dias = trim($_POST['dias']);
     $objetivo = trim($_POST['objetivo']);
 
     // Validaciones básicas
     if (
         empty($nombre_curso) || empty($nombre_docente) || 
-        empty($numero_horas) || empty($dias)
+        empty($numero_horas) || empty($horario) || empty($dias)
     ) {
         echo "Error: Todos los campos obligatorios deben llenarse.";
         exit;
     }
 
-    $sql = "INSERT INTO cursos (nombre_curso, nombre_docente, numero_horas, dias, objetivo)
-            VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO cursos (nombre_curso, nombre_docente, numero_horas, horario, dias, objetivo)
+            VALUES (?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($sql);
 
@@ -30,18 +31,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Error en prepare(): " . $conn->error);
     }
 
-    $stmt->bind_param("ssiss",
+    $stmt->bind_param("ssisss",
         $nombre_curso,
         $nombre_docente,
         $numero_horas,
+        $horario,
         $dias,
         $objetivo
     );
 
     if ($stmt->execute()) {
-    header("Location: altacursos.php");
-    exit();
-}
+        header("Location: alta_cursos.php?success=1");
+        exit();
+    } else {
+        echo "Error al guardar el curso: " . $stmt->error;
+    }
 
     $stmt->close();
     $conn->close();
