@@ -75,8 +75,8 @@
                 e.preventDefault();
                 return false;
             }
-            if (contrasena.length < 6) {
-                alert('La contraseña debe tener al menos 6 caracteres.');
+            if (contrasena.length < 2) {
+                alert('La contraseña debe tener al menos 3 caracteres.');
                 $('input[name="contrasena"]').focus();
                 e.preventDefault();
                 return false;

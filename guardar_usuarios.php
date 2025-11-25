@@ -15,9 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Encriptar contraseña
-    $password_hash = password_hash($contrasena, PASSWORD_DEFAULT);
-
+    // $contrasena se usará tal cual (sin hash)
     $sql = "INSERT INTO usuarios (nombre_usuario, contrasena, rol)
             VALUES (?, ?, ?)";
 
@@ -27,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Error en prepare(): " . $conn->error);
     }
 
-    $stmt->bind_param("sss", $usuario, $password_hash, $rol);
+    $stmt->bind_param("sss", $usuario, $contrasena, $rol);
 
     if ($stmt->execute()) {
         header("Location: altausuarios.php");

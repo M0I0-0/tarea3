@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso Panel</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Página de acceso al panel de administración.">
 </head>
 <body>
     <div class="header">
@@ -13,12 +12,12 @@
     </div>
     <div class="form1">
         <h2>Acceso Panel Administrativo</h2>
-        <form action="mandarformulario.php" method="post">
-            <input type="text" placeholder="Usurario">
+        <form action="mandarformulario.php" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
             <br>
-            <input type="password" placeholder="Contraseña">
+            <input type="password" name="password" placeholder="Contraseña" required>
             <br>
-            <button type="button">Login</button>
+            <button type="submit">Login</button>
         </form>
     </div>
 </body>
