@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Helvetica;
+    margin: auto;
+    background-color: #ECECEC;
+}
+.header{
+    background-color: #33476F;
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+.header h1{
+    font-size: 40px;
+}
+.form1{
+    width: 600px;
+    margin: 70px auto;
+    text-align: center;
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+.form1 input{
+    margin-top: 20px;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    padding: 5px;
+    color: #cfcfcf;
+    font-size: 17px;
+    font-weight: 500;
+}
+.form1 button{
+    background-color: #701E45;
+    color: white;
+    margin: 20px 0 20px 0;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #701E45;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Segunda pagina */
+.main-container {
+    display: flex; 
+    flex: 1; 
+}
+
+
+.menulateral {
+    width: 300px; 
+    background-color: #2b3e63; 
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 0;
+    margin: 20px 0 0 30px
+}
+
+
+.menulateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-bottom: 1px dotted #ccc; 
+    font-size: 16px;
+}
+
+
+
+.btn_cerrar {
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: 20px; 
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 300px; 
+}
+
+
+.contenido {
+    flex: 1; 
+    padding: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 22px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+/* --- AGREGA ESTO AL FINAL DE TU CSS --- */
+
+/* Títulos internos con la línea roja debajo */
+.card h2 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.linea-division {
+    border-bottom: 2px solid #701E45; /* Color vino */
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botones internos (Gris oscuro y Vino) */
+.btn-acciones {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-gris, .btn-vino {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gris { background-color: #333; }
+.btn-vino { background-color: #701E45; }
+
+/* Estilos para las Tablas (Ver Cursos/Usuarios) */
+.tabla-estilo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-estilo th {
+    background-color: #701E45;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.tabla-estilo td {
+    border: 1px solid #333;
+    padding: 8px;
+    background-color: white;
+    color: black;
+}
+
+.tabla-estilo a { color: blue; text-decoration: underline; }
+
+/* Ajustes para Formularios dentro de la Card */
+.form-group { margin-bottom: 15px; text-align: left; }
+.form-group label { display: block; margin-bottom: 5px; color: #333; }
+.input-card {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Formulario del alta de cursos */
+.curso-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedor de días */
+.dias-container {
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Título del bloque de días */
+.dias-title {
+    margin-bottom: 10px;
+}
+
+/* Opciones de días (labels con radios) */
+.dias-option {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+/* Margen superior reutilizable */
+.mt-15 {
+    margin-top: 15px;
+}
+
+/* Botón guardar ocupa todo el ancho y añade separación */
+.btn-guardar {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Si quieres que los inputs ocupen todo el ancho (opcional) */
+.input-card {
+    width: 100%;
+    box-sizing: border-box;
+}
