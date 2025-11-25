@@ -49,7 +49,7 @@ require "conexion.php";
                         echo "<td>{$row['nombre_usuario']}</td>";
                         echo "<td>{$row['contrasena']}</td>";
                         echo "<td>{$row['rol']}</td>";
-                        echo "<td><a href='eliminar_usuario.php?id={$row['id']}'>Eliminar</a></td>";
+                        echo "<td><a href='eliminar_usuario.php?id={$row['id']}' onclick='confirmarEliminacion(event)'>Eliminar</a></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -62,6 +62,13 @@ require "conexion.php";
         </div>
     </div>
 </div>
+<script>
+function confirmarEliminacion(event) {
+    if (!confirm("¿Seguro que quieres eliminar este registro?")) {
+        event.preventDefault(); // Detiene el clic si el usuario cancela
+    }
+}
+</script>
 
 </body>
 </html>
