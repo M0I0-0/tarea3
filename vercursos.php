@@ -66,6 +66,12 @@ require "conexion.php";
         </div>
     </div>
 </div>
-
+<script>
+function confirmarEliminacion(event) {
+    if (!confirm("¿Seguro que quieres eliminar este registro?")) {
+        event.preventDefault(); // Detiene el clic si el usuario cancela
+    }
+}
+</script>
 </body>
 </html>
