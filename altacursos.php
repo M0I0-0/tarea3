@@ -36,7 +36,7 @@
                         <select class="input-card" name="numero_horas">
                             <option>Numero de horas del curso</option>
                             <option>20</option>
-                            <option>40</option>
+                            <option>30</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -44,8 +44,8 @@
                         <select id="horario" name="horario" class="input-card">
                             <option value="">Selecciona un horario</option>
                             <option value="8-11am">8 - 11 am</option>
-                            <option value="11-2pm">11 am - 2 pm</option>
-                            <option value="2-5pm">2 pm - 5 pm</option>
+                            <option value="11-2pm">12 am - 15 pm</option>
+                            <option value="2-5pm">16 pm - 20 pm</option>
                         </select>
                     </div>
                     <div class="dias-container">

@@ -41,10 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     if ($stmt->execute()) {
-        header("Location: alta_cursos.php?success=1");
+        header("Location: altacursos.php");
         exit();
-    } else {
-        echo "Error al guardar el curso: " . $stmt->error;
     }
 
     $stmt->close();
